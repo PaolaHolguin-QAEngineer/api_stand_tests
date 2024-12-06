@@ -1,58 +1,84 @@
-# API Stand Tests: Urban.Lunch App
+# Sprint 4: API Testing Project  
 
-## Project Overview
+## Project Overview  
+This project focuses on testing new functionalities in the API of **Urban.Grocers**, as part of the back-end development update. The task includes analyzing requirements, designing test cases, and validating API endpoints for two core features: managing kits and checking delivery service availability.  
 
-This project focuses on testing the first Android version of the **Urban.Lunch** mobile application, designed to allow users to order meals from various city restaurants and pick them up at designated locations. The goal is to ensure the app meets specified requirements and delivers a seamless user experience.
+---
 
-## Tasks and Deliverables
+## Objectives  
 
-1. **Requirements Analysis**:  
-   Analyze the provided requirements for the Urban.Lunch mobile app and identify key testing areas.
+1. **Analyze Requirements**:  
+   - Review the back-end requirements and API documentation in apiDoc for new features.  
+   - Focus on endpoints related to kits and delivery services.  
 
-2. **Checklist Creation**:  
-   Develop a detailed checklist to test the mobile app for specific requirements. Use mind maps or flow diagrams if necessary (optional).
+2. **Design Test Cases**:  
+   - Create a checklist of tests to ensure the functionality works as expected.  
+   - Document the checklist in Google Sheets and make it shareable with comment access.  
 
-3. **Testing Execution**:  
-   - Perform tests on the Android emulator (via Android Studio) or an Android device.  
-   - Record results in the format: **PASSED** or **NOT PASSED**.  
-   - For any failed tests, document the issue in Jira and link the bug report to the test results table.
+3. **API Testing with Postman**:  
+   - Validate API responses for each endpoint.  
+   - Submit bug reports in Jira for any issues identified.  
 
-4. **Bug Reporting**:  
-   Create comprehensive bug reports in Jira for any issues identified, providing details for resolution.
+4. **Optional**:  
+   - Compile a test report summarizing findings and the state of the tested product.  
 
-5. **Test Report** (Optional):  
-   Draft a test report summarizing the findings and the tested product's current state.
+---
 
-## How to Format and Submit
+## New Features to Test  
 
-1. Use the provided template to document the results and test cases.  
-2. Ensure the checklist is well-structured and the tests are thoroughly designed.  
-3. Share the document with commenting access enabled.  
-4. Submit the link via the platform's "Supervisión" tab.  
+### **1. Kit Management**  
+- Endpoint: `POST /api/v1/kits/{id}/products`  
+- **Description**: Adds groceries to a kit.  
+- **Validation**: The endpoint should return a `400 Bad Request` when the total number of unique products in a kit exceeds 30.  
 
-**Review Process:**  
-- Supervisors will review submissions within 48 hours.  
-- If revisions are required, corrections must be submitted within the next 48 hours.
+### **2. Delivery Services**  
+- Endpoint: `POST /order-and-go/v1/delivery`  
+- **Description**: Checks if the Order and Go delivery service is available and calculates its cost.  
+- **Validation**: Follow the pricing calculation rules and validate responses for service availability and cost.  
 
-## Evaluation Criteria
+---
 
-- **Checklist and Tests**: Organized, comprehensive, and well-executed.  
-- **Bug Detection**: Identified and reported all relevant issues in Jira.  
-- **Overall Quality**: Thorough execution of all designed checks.
+## Steps  
 
-## Tools and Technologies
+1. **Analyze Documentation**:  
+   - Study the API documentation in apiDoc under "Main.Kits" and "Couriers" sections.  
+   - Understand the requirements for the endpoints mentioned above.  
 
-- **Android Studio**: For testing the mobile app on an emulator.  
-- **Jira**: For bug tracking and reporting.  
-- **Google Sheets**: For documenting test results.  
-- **Mind Mapping Tools** (Optional): For visualizing requirements.
+2. **Create a Checklist**:  
+   - Use a Google Sheets template to document test scenarios for the new features.  
+   - Ensure each test case is labeled as **PASSED** or **FAILED** after execution.  
 
-## Results
+3. **Test with Postman**:  
+   - Use Postman to send requests to the API endpoints and validate their responses.  
+   - For failed cases, create detailed bug reports in Jira and include links to the reports in the checklist.  
 
-The test results and bug reports have been documented in the attached Google Sheets file. This includes links to Jira for bug tracking and the detailed test execution status.
+4. **Share Your Work**:  
+   - Provide commenting access to the checklist using Google Sheets’ sharing settings.  
+   - Submit the link to the platform for review.  
 
-## Contact
+---
 
-For questions or feedback, feel free to reach out!  
+## Deliverables  
+
+1. **Checklist**: A comprehensive Google Sheet covering all test cases.  
+2. **Bug Reports**: Jira tickets documenting any identified issues.  
+3. **Optional Test Report**: A summary of the tests conducted, findings, and product status.  
+
+---
+
+## Tools and Resources  
+
+- **Postman**: For API testing and validation.  
+- **Google Sheets**: To document the test checklist.  
+- **Jira**: For bug reporting.  
+- **apiDoc**: API documentation reference.  
+
+---
+
+## Evaluation Criteria  
+
+1. Test cases are well-structured and address the given requirements.  
+2. Tests are executed thoroughly, and results are accurately documented.  
+3. Bugs are correctly identified, documented, and linked to the checklist.  
+
 **Author**: Paola Holguín  
-**Email**: paolaholguinmercado@gmail.com  
